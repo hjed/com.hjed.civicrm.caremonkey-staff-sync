@@ -1,17 +1,17 @@
 <?php
-use CRM_CaremonkeySync_ExtensionUtil as E;
+use CRM_CaremonkeyStaffSync_ExtensionUtil as E;
 
-class CRM_CaremonkeySync_BAO_CaremonkeySync extends CRM_CaremonkeySync_DAO_CaremonkeySync {
+class CRM_CaremonkeyStaffSync_BAO_CaremonkeyStaffSync extends CRM_CaremonkeyStaffSync_DAO_CaremonkeyStaffSync {
 
   /**
-   * Create a new CaremonkeySync based on array-data
+   * Create a new CaremonkeyStaffSync based on array-data
    *
    * @param array $params key-value pairs
-   * @return CRM_CaremonkeySync_DAO_CaremonkeySync|NULL
+   * @return CRM_CaremonkeyStaffSync_DAO_CaremonkeyStaffSync|NULL
    */
   public static function create($params) {
-    $className = 'CRM_CaremonkeySync_DAO_CaremonkeySync';
-    $entityName = 'CaremonkeySync';
+    $className = 'CRM_CaremonkeyStaffSync_DAO_CaremonkeyStaffSync';
+    $entityName = 'CaremonkeyStaffSync';
     $hook = 'create';
 
     CRM_Utils_Hook::pre($hook, $entityName, CRM_Utils_Array::value('id', $params), $params);
@@ -24,11 +24,11 @@ class CRM_CaremonkeySync_BAO_CaremonkeySync extends CRM_CaremonkeySync_DAO_Carem
   }
 
   /**
-   * Create a set of new CaremonkeySync based on a CareMonkey object
+   * Create a set of new CaremonkeyStaffSync based on a Caremonkey Staff object
    * and its possible roles
    *
-   * @param array $params key-value pairs representing a file in the CareMonkey rest api
-   * @return array of role based CaremonkeySync's
+   * @param array $params key-value pairs representing a file in the Caremonkey Staff rest api
+   * @return array of role based CaremonkeyStaffSync's
    */
   public static function createFromGroupsResponse($params) {
     $groupName = $params['name'];
@@ -37,7 +37,7 @@ class CRM_CaremonkeySync_BAO_CaremonkeySync extends CRM_CaremonkeySync_DAO_Carem
     print("\nparams:");
     print_r($params);
     $dbParams = array(
-      'caremonkey_id' => $params['id'],
+      'caremonkey_staff_id' => $params['id'],
       'group_name' => $groupName,
       'type' => 'member'
     );
@@ -50,11 +50,11 @@ class CRM_CaremonkeySync_BAO_CaremonkeySync extends CRM_CaremonkeySync_DAO_Carem
   /**
    * Lookup a folder mapping
    * @param $oGroupValue the option group value to search for
-   * @return CRM_Core_DAO|object the dao containing the caremonkey_id and the role
+   * @return CRM_Core_DAO|object the dao containing the caremonkey_staff_id and the role
    */
   public static function getByOptionGroupValue($oGroupValue) {
     $dao = CRM_Core_DAO::executeQuery(
-      "SELECT caremonkey_id, type FROM civicrm_caremonkey_sync WHERE group_name = (%1)",
+      "SELECT caremonkey_staff_id, type FROM civicrm_caremonkey_staff_sync WHERE group_name = (%1)",
       array(1 => array($oGroupValue, 'String'))
     );
     $dao->fetch();

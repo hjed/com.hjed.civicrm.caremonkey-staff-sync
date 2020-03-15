@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<extension key="com.hjed.civicrm.caremonkey_sync" type="module">
-  <file>caremonkey_sync</file>
-  <name>CareMonkey Group Sync</name>
+<extension key="com.hjed.civicrm.caremonkey_staff_sync" type="module">
+  <file>caremonkey_staff_sync</file>
+  <name>Caremonkey Staff  Group Sync</name>
   <description>This plugin provides basic sync capabilities to give groups access to CareMonkeys</description>
   <license>AGPL-3.0</license>
   <maintainer>
@@ -25,6 +25,6 @@
   </compatibility>
   <comments>This is a new, undeveloped module</comments>
   <civix>
-    <namespace>CRM/CaremonkeySync</namespace>
+    <namespace>CRM/CaremonkeyStaffSync</namespace>
   </civix>
 </extension>

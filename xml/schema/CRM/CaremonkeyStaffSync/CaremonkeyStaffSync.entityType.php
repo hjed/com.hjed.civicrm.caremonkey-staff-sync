@@ -4,8 +4,8 @@
 return array (
   0 => 
   array (
-    'name' => 'CaremonkeySync',
-    'class' => 'CRM_CaremonkeySync_DAO_CaremonkeySync',
-    'table' => 'civicrm_caremonkey_sync',
+    'name' => 'CaremonkeyStaffSync',
+    'class' => 'CRM_CaremonkeyStaffSync_DAO_CaremonkeyStaffSync',
+    'table' => 'civicrm_caremonkey_staff_sync',
   ),
 );

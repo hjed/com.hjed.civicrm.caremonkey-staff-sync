@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<menu>
+  <item>
+    <path>civicrm/caremonkey-staff-sync/config</path>
+    <page_callback>CRM_CaremonkeyStaffSync_Form_CaremonkeyStaffSyncSettings</page_callback>
+    <title>Caremonkey Staff  Settings</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/caremonkey-staff-sync/connection</path>
+    <page_callback>CRM_CaremonkeyStaffSync_Page_CaremonkeyStaffSyncSettings</page_callback>
+    <title>Caremonkey Staff  Setup</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/caremonkey-staff-sync/callback</path>
+    <page_callback>CRM_CaremonkeyStaffSync_Page_OAuthCallback</page_callback>
+    <title>OAuthCallback</title>
+    <access_arguments>access CiviCRM</access_arguments>
+  </item>
+</menu>

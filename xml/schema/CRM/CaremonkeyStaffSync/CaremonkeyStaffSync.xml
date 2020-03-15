@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1" ?>
 
 <table>
-  <base>CRM/CaremonkeySync</base>
-  <class>CaremonkeySync</class>
-  <name>civicrm_caremonkey_sync</name>
+  <base>CRM/CaremonkeyStaffSync</base>
+  <class>CaremonkeyStaffSync</class>
+  <name>civicrm_caremonkey_staff_sync</name>
   <comment>FIXME</comment>
   <log>true</log>
 
@@ -18,10 +18,10 @@
     <autoincrement>true</autoincrement>
   </primaryKey>
   <field>
-    <name>caremonkey_id</name>
+    <name>caremonkey_staff_id</name>
     <type>int unsigned</type>
     <required>true</required>
-    <comment>CareMonkey Group ID</comment>
+    <comment>Caremonkey Staff Group ID</comment>
   </field>
   <field>
     <name>type</name>
@@ -34,7 +34,7 @@
   <field>
     <name>group_name</name>
     <pseudoconstant>
-      <optionGroupName>caremonkey_sync_sync_groups_options</optionGroupName>
+      <optionGroupName>caremonkey_staff_sync_sync_groups_options</optionGroupName>
     </pseudoconstant>
     <type>varchar</type>
     <length>255</length>

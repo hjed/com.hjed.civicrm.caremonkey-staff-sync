@@ -1,20 +1,20 @@
 <?php
 
-use CRM_CaremonkeySync_ExtensionUtil as E;
+use CRM_CaremonkeyStaffSync_ExtensionUtil as E;
 
 /**
  * Form controller class
  * Lots of inspiration drawn from https://github.com/eileenmcnaughton/nz.co.fuzion.civixero/blob/master/CRM/Civixero/Form/XeroSettings.php
  * @see https://wiki.civicrm.org/confluence/display/CRMDOC/QuickForm+Reference
  */
-class CRM_CaremonkeySync_Form_CaremonkeySyncSettings extends CRM_Core_Form {
+class CRM_CaremonkeyStaffSync_Form_CaremonkeyStaffSyncSettings extends CRM_Core_Form {
 
   protected function getConnectionSettingsPrefix() {
-    return 'caremonkey_sync';
+    return 'caremonkey_staff_sync';
   }
 
   protected function getHumanReadableConnectionName() {
-    return "CareMonkey Sync";
+    return "Caremonkey Staff Sync";
   }
 
   private $_submittedValues = array();
@@ -125,7 +125,7 @@ class CRM_CaremonkeySync_Form_CaremonkeySyncSettings extends CRM_Core_Form {
   }
 
   function getTemplateFileName() {
-    $tplname = __DIR__ . '/../../../templates/CRM/CaremonkeySync/Form/CaremonkeySyncSettings.tpl';
+    $tplname = __DIR__ . '/../../../templates/CRM/CaremonkeyStaffSync/Form/CaremonkeyStaffSyncSettings.tpl';
     return $tplname;
   }
 

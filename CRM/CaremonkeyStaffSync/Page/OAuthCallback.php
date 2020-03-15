@@ -3,9 +3,9 @@
 /**
  * Handles CareMonkeyoauth callback
  */
-use CRM_CaremonkeySync_ExtensionUtil as E;
+use CRM_CaremonkeyStaffSync_ExtensionUtil as E;
 
-class CRM_CaremonkeySync_Page_OAuthCallback extends CRM_Core_Page {
+class CRM_CaremonkeyStaffSync_Page_OAuthCallback extends CRM_Core_Page {
 
   public function run() {
     // Example: Set the page-title dynamically; alternatively, declare a static title in xml/Menu/*.xml
@@ -15,12 +15,12 @@ class CRM_CaremonkeySync_Page_OAuthCallback extends CRM_Core_Page {
     // TODO: verify input
     $prefix = $state_array[0];
     $state = $state_array[1];
-    $helper = CRM_CaremonkeySync_CaremonkeyHelper::oauthHelper();
+    $helper = CRM_CaremonkeyStaffSync_CaremonkeyStaffHelper::oauthHelper();
     //verify the callback
     if($helper->verifyState($state)) {
       error_log("verify");
       print("verify<br><hr/>");
-      CRM_CaremonkeySync_CaremonkeyHelper::doOAuthCodeExchange($_GET['code']);
+      CRM_CaremonkeyStaffSync_CaremonkeyStaffHelper::doOAuthCodeExchange($_GET['code']);
     } else {
       echo "error";
     }

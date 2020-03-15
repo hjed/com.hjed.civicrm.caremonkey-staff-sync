@@ -33,6 +33,6 @@
 
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP TABLE IF EXISTS `civicrm_caremonkey_sync`;
+DROP TABLE IF EXISTS `civicrm_caremonkey_staff_sync`;
 
 SET FOREIGN_KEY_CHECKS=1;

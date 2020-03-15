@@ -62,7 +62,7 @@
 
 SET FOREIGN_KEY_CHECKS=0;
 
-DROP TABLE IF EXISTS `civicrm_caremonkey_sync`;
+DROP TABLE IF EXISTS `civicrm_caremonkey_staff_sync`;
 
 SET FOREIGN_KEY_CHECKS=1;
 -- /*******************************************************
@@ -73,17 +73,17 @@ SET FOREIGN_KEY_CHECKS=1;
 
 -- /*******************************************************
 -- *
--- * civicrm_caremonkey_sync
+-- * civicrm_caremonkey_staff_sync
 -- *
 -- * FIXME
 -- *
 -- *******************************************************/
-CREATE TABLE `civicrm_caremonkey_sync` (
+CREATE TABLE `civicrm_caremonkey_staff_sync` (
 
 
      `id` int unsigned NOT NULL AUTO_INCREMENT  COMMENT 'Entity ID that civicrm requires to be an int',
-     `caremonkey_id` int NOT NULL   COMMENT 'CareMonkey Group ID',
-     `type` varchar(255) NOT NULL   COMMENT 'The CareMonkey group type (staff, member)',
+     `caremonkey_staff_id` int NOT NULL   COMMENT 'Caremonkey Staff Group ID',
+     `type` varchar(255) NOT NULL   COMMENT 'The Caremonkey Staff group type (staff, member)',
      `group_name` varchar(255) NOT NULL,
         PRIMARY KEY (`id`)
  
