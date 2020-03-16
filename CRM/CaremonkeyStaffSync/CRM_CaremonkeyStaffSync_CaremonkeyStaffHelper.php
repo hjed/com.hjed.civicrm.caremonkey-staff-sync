@@ -187,6 +187,7 @@ class CRM_CaremonkeyStaffSync_CaremonkeyStaffHelper {
             'member' =>
               array(
                 'email' => $contact['emails'][0]['email'],
+                'request_email' => $contact['emails'][0]['email'],
                 'first_name' => $contact['first_name'],
                 'last_name' => $contact['last_name']
               )
